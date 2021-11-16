@@ -1,3 +1,29 @@
+# install nodejs
+https://nodejs.org/en/download/
+check npm version -> npm --version
+
+# install angular
+npm install -g @angular/cli
+https://angular.io/guide/setup-local
+check angular version -> ng --version
+
+
+# install npm modules in project
+npm install
+# update npm modules
+npm update
+
+# how to run angular project
+To create, build, and serve a new, basic Angular project on a development server, go to the parent directory of your new workspace use the following commands:
+
+1 : ng new my-first-project -> To create new project "my-first-project"
+
+2 : cd my-first-project
+
+3 : ng serve -> To compile angular project
+
+
+
 # AngularProj
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.3.
