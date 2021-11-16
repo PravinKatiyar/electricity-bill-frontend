@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="row">
+        <div class="input-group col-md-14">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="header-title ">List of Connections</h1>
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+    <thead>
+        <th>#</th>
+        <th>Meter-Number</th>
+        <th>CustoemrID</th>
+        <th>Connection-Type</th>
+        <th>Approved</th>
+              
+    </thead>
+    <tbody [@listAnimation]>
+        <tr *ngFor = "let connection of connectionsArray; let i = index">
+            <td>{{i+1}}</td>
+            <td *ngIf = "connection.approvalStatus" >{{connection.meterNumber}}</td>
+            <td *ngIf = "!connection.approvalStatus" >Not yet assigned</td>
+            <td>{{connection.customerID}}</td>
+            <td>{{connection.connectionType}}</td>
+            <td>{{connection.approvalStatus}}</td>
+            <td *ngIf = "profile === 'ADMIN' && !connection.approvalStatus"><button (click) = 'approveConnetion(i)' >Approve</button></td>
+            <td *ngIf = "profile === 'ADMIN' && connection.approvalStatus"><button (click) = 'showInput(i)' > Enter last Reading </button></td>
+            <td *ngIf = "showIndex === i"><input [(ngModel)] = 'lastReading' type="number" placeholder="Add Last Reading" ></td>
+            <td *ngIf = "showIndex === i"> <button (click) = 'generateBill(i)' >Generate Bill</button> </td>
+            <td><button *ngIf = "connection.approvalStatus" (click)="viewBill(i)" class="btn btn-warning">View Bill</button></td>
+            <td><button (click) = "deleteConnection(i)" >Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<!--end table-responsive-->
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="error-snackbar">{{errorMessage}}</div>
+<div id="success-snackbar">{{successMessage}}</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
