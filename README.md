@@ -17,7 +17,9 @@ npm update
 To create, build, and serve a new, basic Angular project on a development server, go to the parent directory of your new workspace use the following commands:
 
 1 : ng new my-first-project -> To create new project "my-first-project"
+
 2 : cd my-first-project
+
 3 : ng serve -> To compile angular project
 
 
