@@ -7,6 +7,8 @@ npm install -g @angular/cli
 https://angular.io/guide/setup-local
 check angular version -> ng --version
 
+# install VS code 
+https://code.visualstudio.com/download
 
 # install npm modules in project
 npm install
